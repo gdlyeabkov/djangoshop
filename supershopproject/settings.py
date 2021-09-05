@@ -229,7 +229,6 @@ CORS_ALLOW_CREDENTIALS = True
 APPEND_SLASH = False
 
 MEDIA_URL = '/media/'
-
 MEDIA_ROOT = os.path.join(BASE_DIR,  'static', 'media')
 
 # WEBPACK_LOADER = {
