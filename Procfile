@@ -1,1 +1,1 @@
-web: gunicorn supershopproject.wsgi
+gunicorn --bind 0.0.0.0:8000 supershopproject.wsgi
