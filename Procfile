@@ -1,1 +1,1 @@
-web: gunicorn --bind 0.0.0.0:8000 supershopproject.wsgi
+web: gunicorn lafusee.wsgi -b 0.0.0.0:$PORT
