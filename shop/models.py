@@ -2,8 +2,7 @@ from django.db import models
 
 # Create your models here.
 def productsInBucketDefault():
-    # return []
-    return []
+    return "[]"
 
 class MyUser(models.Model):
     id = models.AutoField(primary_key=True)
