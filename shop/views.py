@@ -69,7 +69,9 @@ def productByProductID(request, productID):
 	print("productID: " + str(productID))
 	user = MyUser.objects.get(email=request.GET["useremail"])
 	productIndex = -1 
-	for product in user.productsInBucket:
+	print(user.productsInBucket)
+	productsInBucket = json.loads(user.productsInBucket)
+	for product in productsInBucket:
 		productIndex += 1
 		print("product[id]: " + str(product['id']))
 		if (product['id'] == int(productID)):

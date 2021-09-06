@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^&riud0z@-47h3yq#iiu$jyv1x0@ny7+&_6kd+gk7o6c-%h=a_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'marketrade.herokuapp.com',
