@@ -46,7 +46,8 @@ urlpatterns = [
     path('users/bucket/add/', views.usersBucketAdd),
     path('users/bucket/', views.usersBucket),
     path('<str:route>/', views.otherRoutes),
-    path('<str:route>/<str:secondroute>/', views.otherRoutes),
+    path('<str:route>/<str:secondroute>', views.otherRoutes),
+    path('<str:route>/<int:secondroute>', views.otherRoutes),
     path('', TemplateView.as_view(template_name='index.html'), name='index')
 ]
 

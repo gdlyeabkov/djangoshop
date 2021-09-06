@@ -67,16 +67,9 @@ def adminProductsDelete(request):
 
 def productByProductID(request, productID):
 	print("productID: " + str(productID))
-	user = MyUser.objects.get(email=request.GET["useremail"])
-	productIndex = -1 
-	print(user.productsInBucket)
-	productsInBucket = json.loads(user.productsInBucket)
-	for product in productsInBucket:
-		productIndex += 1
-		print("product[id]: " + str(product['id']))
-		if (product['id'] == int(productID)):
-			return JsonResponse({'product': product, 'message': "success" })
-	return JsonResponse({ 'message': "error" })
+	product = MyProduct.objects.get(id=productID)
+	myjson = json.dumps({ 'product': { 'id': product.id, 'name': product.name, 'price': product.price }, 'message': 'success' })
+	return HttpResponse(myjson, content_type='application/json')
 
 def usersBucketDelete(request):
 	user = MyUser.objects.get(email=request.GET["useremail"])
